@@ -1,0 +1,113 @@
+/* Base CSS */
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+a:focus { outline: 0 solid }
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: 700;
+}
+body {
+
+}
+a:hover { text-decoration: none }
+
+.section-padding {
+    padding: 80px 0;
+}
+.single-flipe {
+    margin: 0 auto;
+    height: 300px;
+    position: relative;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+    width: 100%;
+}
+.single-flipe .front {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 900;
+    width: 100%;
+    text-align: center;
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+        display: table;
+        background-color: red;
+        border-bottom: 5px solid purple;
+}
+.single-flipe .back {
+    height: 100%;
+    position: absolute;
+    background-color: purple;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+        display: table;
+        border-bottom: 5px solid purple;
+    -webkit-transform: rotateY(-180deg);
+       -moz-transform: rotateY(-180deg);
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+    -webkit-transition: all .4s ease-in-out;
+       -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+         -o-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+}
+.single-flipe.flip .front {
+    z-index: 900;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+}
+.single-flipe.flip .back {
+    z-index: 1000;
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+}
+
+.box1, .box2 {
+    display:  table-cell;
+    vertical-align:  middle;
+    color: #fff
+}
+
+.box1 i.fa, .box2 i.fa {
+    font-size:  100px;
+}
+
+.box1 h2, .box2 h2 {
+    text-transform:  uppercase;
+    font-size:  40px;
+    margin-top: 20px;
+}
